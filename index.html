@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CloudSolutionsZA helps South African businesses with cloud workspace setup, cloud infrastructure, cybersecurity, autonomous workflows and managed cloud support." />
+  <meta name="keywords" content="cloud solutions South Africa, Microsoft 365 setup, business email setup, cloud infrastructure, cybersecurity Pretoria, managed cloud support, cloud workspace setup" />
+  <title>CloudSolutionsZA | Think Cloud. Think Growth.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-glow"></div>
+
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="CloudSolutionsZA home">
+      <img src="assets/csza-logo-transparent.png" alt="CloudSolutionsZA logo" />
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#toolkit">Toolkit</a>
+      <a href="#contact">Book Call</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <main id="home">
+    <section class="hero section-pad">
+      <div class="hero-logo-wrap">
+        <img src="assets/csza-logo-transparent.png" alt="CloudSolutionsZA logo" class="hero-logo" />
+      </div>
+      <p class="eyebrow">Cloud solutions for South African businesses</p>
+      <h1>THINK CLOUD.<br><span>THINK GROWTH.</span></h1>
+      <p class="hero-text">Premium cloud workspace, infrastructure, security and automation support — built for businesses that want to move smarter.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a Free Discovery Call</a>
+        <a href="#toolkit" class="btn btn-secondary">Use Free Security Toolkit</a>
+      </div>
+      <div class="trust-bar">
+        <a class="google-rating" href="https://www.google.com/search?q=CloudSolutionsZA+reviews" target="_blank" rel="noopener">
+          <span class="stars">★★★★★</span>
+          Rated on Google
+        </a>
+        <span>Pretoria, South Africa</span>
+      </div>
+    </section>
+
+    <section class="section-pad" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">What we do</p>
+        <h2>Cloud services made simple.</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="glass-card large-card">
+          <span class="card-number">01</span>
+          <h3>Cloud Workspace Setup</h3>
+          <p>Business email, Microsoft 365, Google Workspace and secure collaboration tools for modern teams.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-number">02</span>
+          <h3>Cloud Infrastructure</h3>
+          <p>Web hosting, databases, storage, backups and scalable cloud environments.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-number">03</span>
+          <h3>Autonomous Workflows</h3>
+          <p>Automate leads, follow-ups, onboarding, approvals and repetitive admin tasks.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-number">04</span>
+          <h3>Managed Cloud Support</h3>
+          <p>Ongoing technical support, user management, monitoring and cloud maintenance.</p>
+        </article>
+        <article class="glass-card accent-card">
+          <span class="card-number">05</span>
+          <h3>Cyber Security</h3>
+          <p>MFA setup, email protection, access control, security reviews and awareness support.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad split-section" id="benefits">
+      <div>
+        <p class="eyebrow">Why cloud</p>
+        <h2>Less manual work. More control.</h2>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit-item"><strong>Secure access</strong><span>Protect accounts, data and business email.</span></div>
+        <div class="benefit-item"><strong>Work anywhere</strong><span>Cloud tools for teams, files and communication.</span></div>
+        <div class="benefit-item"><strong>Scale faster</strong><span>Start small and grow without heavy hardware costs.</span></div>
+        <div class="benefit-item"><strong>Automate tasks</strong><span>Save time with smarter digital workflows.</span></div>
+      </div>
+    </section>
+
+    <section class="section-pad toolkit-section" id="toolkit">
+      <div class="section-heading">
+        <p class="eyebrow">Free cyber security toolkit</p>
+        <h2>Create strong unique passwords.</h2>
+      </div>
+
+      <div class="toolkit-card">
+        <div class="tool-controls">
+          <label>Password Type</label>
+          <div class="pill-group" role="group" aria-label="Password type">
+            <button class="pill active" data-type="random">Random</button>
+            <button class="pill" data-type="memorable">Memorable</button>
+            <button class="pill" data-type="pin">PIN</button>
+          </div>
+
+          <label>Password Length</label>
+          <select id="passwordLength">
+            <option value="8">8 characters</option>
+            <option value="12" selected>12 characters</option>
+            <option value="16">16 characters</option>
+            <option value="24">24 characters</option>
+          </select>
+
+          <button class="btn btn-primary full-btn" id="generateBtn">Generate Password</button>
+        </div>
+
+        <div class="password-result">
+          <p class="small-label">Generated Password</p>
+          <div class="password-box">
+            <input type="text" id="passwordOutput" readonly value="Click generate" />
+            <button id="copyBtn">Copy</button>
+          </div>
+          <div class="strength-row">
+            <span id="strengthText">Strength: Waiting</span>
+            <span id="entropyText">Entropy: 0 bits</span>
+          </div>
+          <div class="meter"><div id="meterFill"></div></div>
+          <p class="tool-note">Use a different password for every account. Never reuse banking, email or admin passwords.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad about-section" id="about">
+      <div class="glass-card about-card">
+        <p class="eyebrow">About CloudSolutionsZA</p>
+        <h2>Helping businesses grow confidently in the digital space.</h2>
+        <p>We simplify cloud technology for South African businesses that need secure systems, modern tools and reliable support.</p>
+      </div>
+    </section>
+
+    <section class="section-pad testimonials" id="testimonials">
+      <div class="section-heading">
+        <p class="eyebrow">Client feedback</p>
+        <h2>Trusted by growing businesses.</h2>
+      </div>
+      <div class="testimonial-grid">
+        <article class="glass-card"><span class="stars">★★★★★</span><p>Professional service and clear cloud guidance.</p></article>
+        <article class="glass-card"><span class="stars">★★★★★</span><p>Quick setup, clean communication and reliable support.</p></article>
+        <article class="glass-card"><span class="stars">★★★★★</span><p>Helped us understand what cloud solution fits our business.</p></article>
+      </div>
+      <a class="btn btn-secondary review-btn" href="https://www.google.com/search?q=CloudSolutionsZA+reviews" target="_blank" rel="noopener">View Google Reviews</a>
+    </section>
+
+    <section class="section-pad contact-section" id="contact">
+      <div class="contact-copy">
+        <p class="eyebrow">Book a free discovery call</p>
+        <h2>Talk to a real human.</h2>
+        <p>No obligation. A quick call to point you in the right direction and help you understand which cloud solution fits your business.</p>
+        <div class="contact-lines">
+          <a href="mailto:info@cloudsolutionsza.com">info@cloudsolutionsza.com</a>
+          <a href="tel:+27699220075">069 922 0075 · Office hours</a>
+        </div>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/xqejkkvl" method="POST">
+        <label>Name<input type="text" name="name" required placeholder="Your name" /></label>
+        <label>Email<input type="email" name="email" required placeholder="you@company.co.za" /></label>
+        <label>Number<input type="tel" name="number" required placeholder="069 000 0000" /></label>
+        <label>Service Needed
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Cloud Workspace Setup</option>
+            <option>Cloud Infrastructure</option>
+            <option>Autonomous Workflows</option>
+            <option>Managed Cloud Support</option>
+            <option>Cyber Security</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" rows="4" placeholder="Tell us what you need"></textarea></label>
+        <button class="btn btn-primary full-btn" type="submit">Book Call</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand">
+      <img src="assets/csza-logo-transparent.png" alt="CloudSolutionsZA logo" />
+      <p>© 2026 CloudSolutionsZA. Pretoria, South Africa. All rights reserved.</p>
+    </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/cloudsolutionsza" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm6.2-2.4a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/cloudsolutionsza" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4h-4V9c0-.7.3-1 1-1z"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
