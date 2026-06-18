@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://cloudsolutionsza.com/</loc>
-    <lastmod>2026-06-18</lastmod>
-    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://cloudsolutionsza.com/cybersecurity.html</loc>
+  </url>
+
+  <url>
+    <loc>https://cloudsolutionsza.com/cloud-infrastructure.html</loc>
+  </url>
+
+  <url>
+    <loc>https://cloudsolutionsza.com/automation.html</loc>
+  </url>
+
+  <url>
+    <loc>https://cloudsolutionsza.com/business-email.html</loc>
   </url>
 
 </urlset>
